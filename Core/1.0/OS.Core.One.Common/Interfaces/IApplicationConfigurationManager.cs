@@ -1,4 +1,4 @@
-﻿namespace OS.Core.Common
+﻿namespace OS.Core.One.Common
 {
     public interface IApplicationConfigurationManager
     {
