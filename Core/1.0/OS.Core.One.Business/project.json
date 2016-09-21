@@ -3,7 +3,8 @@
 
   "dependencies": {
     "NETStandard.Library": "1.6.0",
-    "OS.Core.One.Business.Entities": "1.0.0-*"
+    "OS.Core.One.Business.Entities": "1.0.0-*",
+    "OS.Core.One.Data.Queries": "1.0.0-*"
   },
 
   "frameworks": {

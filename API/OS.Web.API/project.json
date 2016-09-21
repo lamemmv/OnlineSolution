@@ -18,7 +18,9 @@
     "OS.Core.One.Data.Queries": "1.0.0-*",
     "Microsoft.AspNetCore.StaticFiles": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
-    "OS.Core.One.Data.Entities": "1.0.0-*"
+    "OS.Core.One.Data.Entities": "1.0.0-*",
+    "OS.Core.One.Business": "1.0.0-*",
+    "OS.Core.One.Business.Entities": "1.0.0-*"
   },
 
   "tools": {

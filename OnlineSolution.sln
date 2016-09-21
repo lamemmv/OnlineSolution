@@ -40,6 +40,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DbScripts", "DbScripts", "{
 		DbScripts\Baseline.sql = DbScripts\Baseline.sql
 	EndProjectSection
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OS.Core.One.Business", "Core\1.0\OS.Core.One.Business\OS.Core.One.Business.xproj", "{31DF0F4F-AC9A-4C34-A585-EDA68963D156}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OS.Core.One.Business.Entities", "Core\1.0\OS.Core.One.Business.Entities\OS.Core.One.Business.Entities.xproj", "{0CD01E16-1E48-475A-B1AD-F944CAAE98EF}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "OS.Core.One.Infrastructure", "Core\1.0\OS.Core.One.Infrastructure\OS.Core.One.Infrastructure.xproj", "{92A4E0C8-C1A6-4048-87E8-59005CFA2C46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +92,18 @@ Global
 		{A278EE20-A072-41F0-B536-286B578B0000}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A278EE20-A072-41F0-B536-286B578B0000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A278EE20-A072-41F0-B536-286B578B0000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DF0F4F-AC9A-4C34-A585-EDA68963D156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DF0F4F-AC9A-4C34-A585-EDA68963D156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DF0F4F-AC9A-4C34-A585-EDA68963D156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DF0F4F-AC9A-4C34-A585-EDA68963D156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD01E16-1E48-475A-B1AD-F944CAAE98EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD01E16-1E48-475A-B1AD-F944CAAE98EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD01E16-1E48-475A-B1AD-F944CAAE98EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD01E16-1E48-475A-B1AD-F944CAAE98EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A4E0C8-C1A6-4048-87E8-59005CFA2C46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A4E0C8-C1A6-4048-87E8-59005CFA2C46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A4E0C8-C1A6-4048-87E8-59005CFA2C46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A4E0C8-C1A6-4048-87E8-59005CFA2C46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,5 +119,8 @@ Global
 		{8EA70255-5A2B-44C2-9852-645870CE7D53} = {6E579EC2-9CE4-4DAD-9466-F16BB13D4CF5}
 		{D12AB4EC-8826-46E3-AB11-869A57E38386} = {6E579EC2-9CE4-4DAD-9466-F16BB13D4CF5}
 		{A278EE20-A072-41F0-B536-286B578B0000} = {96D2C2A3-E77C-4220-9B6E-723A77F456CF}
+		{31DF0F4F-AC9A-4C34-A585-EDA68963D156} = {6E579EC2-9CE4-4DAD-9466-F16BB13D4CF5}
+		{0CD01E16-1E48-475A-B1AD-F944CAAE98EF} = {6E579EC2-9CE4-4DAD-9466-F16BB13D4CF5}
+		{92A4E0C8-C1A6-4048-87E8-59005CFA2C46} = {6E579EC2-9CE4-4DAD-9466-F16BB13D4CF5}
 	EndGlobalSection
 EndGlobal

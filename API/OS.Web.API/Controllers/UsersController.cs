@@ -1,26 +1,26 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using OS.Core.One.Data.Queries;
-using OS.Core.One.Data.Entities;
 using OS.Core.One.Common.Intermediate;
+using OS.Core.One.Business;
+using OS.Core.One.Business.Entities;
 
 namespace OS.Web.API.Controllers
 {
     [Route("api/[controller]")]
     public class UsersController : Controller
     {
-        private readonly IUsersProcedures _usersProcedures;
+        private readonly IUsersService _usersService;
 
-        public UsersController(IUsersProcedures usersProcedures)
+        public UsersController(IUsersService usersService)
         {
-            _usersProcedures = usersProcedures;
+            _usersService = usersService;
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<UserDTO> Get()
+        public IEnumerable<User> Get()
         {
-            return _usersProcedures.Get(new SearchUsersRequest { Keyword = string.Empty });
+            return _usersService.Get(new SearchUsersRequest { Keyword = string.Empty });
         }
 
         // GET api/values/5

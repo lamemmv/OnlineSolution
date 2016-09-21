@@ -6,10 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using OS.Core.One.Common;
 using OS.Core.One.Common.Intermediate;
-using OS.Core.One.Data.Common;
-using OS.Core.One.Data.Queries;
+using OS.Web.API.Core;
 using System.Net;
 
 namespace OS.Web.API
@@ -36,10 +34,7 @@ namespace OS.Web.API
             services.AddOptions();
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.Configure<AppData>(Configuration.GetSection("Data"));
-            services.AddScoped<IApplicationConfigurationManager, ApplicationConfigurationManager>();
-            services.AddScoped<IOSConfiguration, OSConfiguration>();
-            services.AddScoped<IConnectionFactory, ConnectionFactory>();
-            services.AddScoped<IUsersProcedures, UsersProcedures>();
+            DependenciesRegistrator.Register(services);
 
             // Enable Cors
             services.AddCors();
