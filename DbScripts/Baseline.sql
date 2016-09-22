@@ -34,3 +34,18 @@ BEGIN
     SELECT * FROM [Core].[Users] WHERE FirstName LIKE '%' + @Keyword + '%';
 END
 GO
+
+
+IF OBJECT_ID('[Core].[GetUserById]', 'p') IS NULL
+    EXEC ('CREATE PROCEDURE [Core].[GetUserById] AS SELECT 1')
+GO
+ALTER PROCEDURE [Core].[GetUserById] 
+	@Id INT
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+    SELECT u.* FROM Core.Users u 
+    WHERE u.Id = @Id;
+END
+GO

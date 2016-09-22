@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using OS.Core.One.Common.Intermediate;
+﻿using Microsoft.AspNetCore.Mvc;
 using OS.Core.One.Business;
 using OS.Core.One.Business.Entities;
+using OS.Core.One.Common.Intermediate;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Web.Http;
 
 namespace OS.Web.API.Controllers
 {
@@ -18,34 +20,37 @@ namespace OS.Web.API.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<User> Get()
+        public async Task<IEnumerable<User>> Get([FromUri]SearchUsersRequest request)
         {
-            return _usersService.Get(new SearchUsersRequest { Keyword = string.Empty });
+            return await Task.FromResult(_usersService.Get(request));
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            return new OkObjectResult(_usersService.GetById(id));
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task<int> Post([FromUri]User request)
         {
+            return await Task.FromResult(_usersService.Create(1, request));
         }
 
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        // PUT api/values
+        [HttpPut]
+        public async Task<bool> Put(User request)
         {
+            return await Task.FromResult(_usersService.Update(request));
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete]
+        public async Task<bool> Delete([FromUri]DeleteUsersRequest request)
         {
+            return await Task.FromResult(_usersService.Delete(request));
         }
     }
 }

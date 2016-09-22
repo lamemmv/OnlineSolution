@@ -2,10 +2,10 @@
 using OS.Core.One.Common.Intermediate;
 using OS.Core.One.Data.Common;
 using OS.Core.One.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using OS.Core.One.Data.Queries.Extensions;
 
 namespace OS.Core.One.Data.Queries
 {
@@ -63,26 +63,35 @@ namespace OS.Core.One.Data.Queries
                     commandType: CommandType.StoredProcedure));
         }
 
-        public void Update(UserDTO request)
+        public bool Update(UserDTO request)
         {
-            this.Execute(connection =>
+            try
             {
-                connection.Execute(
-                    "[Core].[UpdateUser]",
-                    new
-                    {
-                        Id = request.Id,
-                        FirstName = request.FirstName,
-                        LastName = request.LastName,
-                        Email = request.Email,
-                        UserName = request.UserName,
-                        Password = request.Password
-                    },
-                    commandType: CommandType.StoredProcedure);
-            });
+                Execute(connection =>
+                {
+                    connection.Execute(
+                        "[Core].[UpdateUser]",
+                        new
+                        {
+                            Id = request.Id,
+                            FirstName = request.FirstName,
+                            LastName = request.LastName,
+                            Email = request.Email,
+                            UserName = request.UserName,
+                            Password = request.Password
+                        },
+                        commandType: CommandType.StoredProcedure);
+                });
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
         }
 
-        public void Delete(IEnumerable<int> ids)
+        public bool Delete(DeleteUsersRequest request)
         {
             //DataTable idsTable = ids.ConvertToIdsDataTable();
             //this.Execute(connection =>
@@ -95,6 +104,8 @@ namespace OS.Core.One.Data.Queries
             //        },
             //        commandType: CommandType.StoredProcedure);
             //});
+
+            return true;
         }
     }
 }
