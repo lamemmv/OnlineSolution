@@ -10,7 +10,8 @@ namespace OS.Core.One.Data.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
-
+        public string Profession { get; set; }
+        public string Avatar { get; set; }
         public UserDTO()
         {
         }
@@ -23,6 +24,8 @@ namespace OS.Core.One.Data.Entities
             LastName = domain.LastName;
             UserName = domain.UserName;
             Password = domain.Password;
+            Avatar = domain.Avatar;
+            Profession = domain.Profession;
         }
 
         public User ToDomain()
@@ -34,7 +37,9 @@ namespace OS.Core.One.Data.Entities
                 FirstName = FirstName,
                 LastName = LastName,
                 UserName = UserName,
-                Password = Password
+                Password = Password,
+                Avatar = Avatar,
+                Profession = Profession
             };
         }
     }

@@ -39,13 +39,40 @@ GO
 IF OBJECT_ID('[Core].[GetUserById]', 'p') IS NULL
     EXEC ('CREATE PROCEDURE [Core].[GetUserById] AS SELECT 1')
 GO
-ALTER PROCEDURE [Core].[GetUserById] 
-	@Id INT
+ALTER PROCEDURE [Core].[GetUsers]
+	@Keyword [nvarchar](100)
 AS
 BEGIN
 	SET NOCOUNT ON;
+    
+    SELECT * FROM [Core].[Users] 
+    WHERE @Keyword IS NULL
+    OR FirstName LIKE '%' + @Keyword + '%'
+    OR LastName LIKE '%' + @Keyword + '%';
+    
+END
+GO
 
-    SELECT u.* FROM Core.Users u 
-    WHERE u.Id = @Id;
+
+
+IF NOT EXISTS(
+    SELECT *
+    FROM sys.columns 
+    WHERE Name      = N'Avatar'
+      AND Object_ID = Object_ID(N'Core.Users'))
+BEGIN
+    ALTER TABLE Core.Users ADD Avatar NVARCHAR(MAX)
+
+END
+GO
+
+IF NOT EXISTS(
+    SELECT *
+    FROM sys.columns 
+    WHERE Name      = N'Profession'
+      AND Object_ID = Object_ID(N'Core.Users'))
+BEGIN
+    ALTER TABLE Core.Users ADD Profession NVARCHAR(MAX)
+
 END
 GO
