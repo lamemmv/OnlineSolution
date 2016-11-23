@@ -1,0 +1,17 @@
+﻿@using OS.RSS.Models
+@model FeedModel
+
+<div class="">
+    <h2 class="row">This is Data from MSDN feed</h2>
+    @foreach (var item in Model.Items)
+    {
+        <div class="well">
+            <h4>@item.Title</h4>
+            <p>@item.Description</p>
+            <div>Publish date: @item.PublishDate</div>
+            <div>Author: <strong>@item.Author</strong></div>
+            <div class="pull-right" ><a href="@item.Link">More..</a></div>
+            
+        </div>
+    }    
+</div>

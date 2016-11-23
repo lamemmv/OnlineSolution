@@ -40,9 +40,12 @@ namespace OS.Web.API.Controllers
         }
 
         // PUT api/values
-        [HttpPut]
-        public async Task<bool> Put(User request)
+        [HttpPut("{id}")]
+        public async Task<bool> Put(int id, [FromBody]User request)
         {
+            var nameParts = request.Name.Split(new char[] { ' ' });
+            request.FirstName = nameParts.Length > 0  ? nameParts[0] : string.Empty;
+            request.LastName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
             return await Task.FromResult(_usersService.Update(request));
         }
 
