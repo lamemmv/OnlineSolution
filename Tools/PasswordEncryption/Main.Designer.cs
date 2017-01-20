@@ -56,7 +56,21 @@
             this.chkHtml = new System.Windows.Forms.CheckBox();
             this.chkDll = new System.Windows.Forms.CheckBox();
             this.tabPageConfigDate = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnConnectFtp = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtUrlFtp = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnBrowTgtDeviation = new System.Windows.Forms.Button();
+            this.txtTgtDeviation = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnBrowTgtHandbook = new System.Windows.Forms.Button();
+            this.txtTgtHandbook = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBrowTgtBackend = new System.Windows.Forms.Button();
             this.txtTgtBackend = new System.Windows.Forms.TextBox();
@@ -74,28 +88,21 @@
             this.btnCopy = new System.Windows.Forms.Button();
             this.chkEmptyTargetFolder = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnBrowTgtHandbook = new System.Windows.Forms.Button();
-            this.txtTgtHandbook = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnBrowTgtDeviation = new System.Windows.Forms.Button();
-            this.txtTgtDeviation = new System.Windows.Forms.TextBox();
             this.btnCopyAndDeploy = new System.Windows.Forms.Button();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.txtUrlFtp = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnConnectFtp = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtSrcQmsService = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtTgtQmsService = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageConfigDirectory.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPageConfigDate.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -103,7 +110,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -123,7 +129,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1148, 224);
+            this.groupBox3.Size = new System.Drawing.Size(1148, 247);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Logs";
@@ -134,7 +140,7 @@
             this.txtLogs.Location = new System.Drawing.Point(3, 16);
             this.txtLogs.Name = "txtLogs";
             this.txtLogs.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.txtLogs.Size = new System.Drawing.Size(1142, 205);
+            this.txtLogs.Size = new System.Drawing.Size(1142, 228);
             this.txtLogs.TabIndex = 0;
             this.txtLogs.Text = "";
             // 
@@ -146,7 +152,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1148, 560);
+            this.tabControl1.Size = new System.Drawing.Size(1148, 618);
             this.tabControl1.TabIndex = 8;
             // 
             // tabPageConfigDirectory
@@ -157,7 +163,7 @@
             this.tabPageConfigDirectory.Location = new System.Drawing.Point(4, 22);
             this.tabPageConfigDirectory.Name = "tabPageConfigDirectory";
             this.tabPageConfigDirectory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConfigDirectory.Size = new System.Drawing.Size(1140, 425);
+            this.tabPageConfigDirectory.Size = new System.Drawing.Size(1140, 534);
             this.tabPageConfigDirectory.TabIndex = 0;
             this.tabPageConfigDirectory.Text = "General setting";
             this.tabPageConfigDirectory.UseVisualStyleBackColor = true;
@@ -444,13 +450,98 @@
             this.tabPageConfigDate.Location = new System.Drawing.Point(4, 22);
             this.tabPageConfigDate.Name = "tabPageConfigDate";
             this.tabPageConfigDate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageConfigDate.Size = new System.Drawing.Size(1140, 534);
+            this.tabPageConfigDate.Size = new System.Drawing.Size(1140, 592);
             this.tabPageConfigDate.TabIndex = 1;
             this.tabPageConfigDate.Text = "Directories";
             this.tabPageConfigDate.UseVisualStyleBackColor = true;
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnConnectFtp);
+            this.groupBox7.Controls.Add(this.label10);
+            this.groupBox7.Controls.Add(this.label9);
+            this.groupBox7.Controls.Add(this.txtPassword);
+            this.groupBox7.Controls.Add(this.txtUsername);
+            this.groupBox7.Controls.Add(this.label8);
+            this.groupBox7.Controls.Add(this.txtUrlFtp);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Location = new System.Drawing.Point(3, 514);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1134, 75);
+            this.groupBox7.TabIndex = 8;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Deploy";
+            // 
+            // btnConnectFtp
+            // 
+            this.btnConnectFtp.Location = new System.Drawing.Point(764, 42);
+            this.btnConnectFtp.Name = "btnConnectFtp";
+            this.btnConnectFtp.Size = new System.Drawing.Size(75, 33);
+            this.btnConnectFtp.TabIndex = 6;
+            this.btnConnectFtp.Text = "Reconnect";
+            this.btnConnectFtp.UseVisualStyleBackColor = true;
+            this.btnConnectFtp.Click += new System.EventHandler(this.btnConnectFtp_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(604, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Password";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(443, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Username";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(604, 45);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(143, 24);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Text = "#3K*k4Hj";
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(443, 45);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(143, 24);
+            this.txtUsername.TabIndex = 2;
+            this.txtUsername.Text = "npfrontend";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "URL";
+            // 
+            // txtUrlFtp
+            // 
+            this.txtUrlFtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUrlFtp.Location = new System.Drawing.Point(9, 45);
+            this.txtUrlFtp.Name = "txtUrlFtp";
+            this.txtUrlFtp.Size = new System.Drawing.Size(404, 24);
+            this.txtUrlFtp.TabIndex = 0;
+            this.txtUrlFtp.Text = "ftp://loke.netpower.no";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.txtTgtQmsService);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnBrowTgtDeviation);
             this.groupBox2.Controls.Add(this.txtTgtDeviation);
@@ -461,12 +552,82 @@
             this.groupBox2.Controls.Add(this.btnBrowTgtBackend);
             this.groupBox2.Controls.Add(this.txtTgtBackend);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(3, 202);
+            this.groupBox2.Location = new System.Drawing.Point(3, 257);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1134, 194);
+            this.groupBox2.Size = new System.Drawing.Size(1134, 257);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Target";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.Location = new System.Drawing.Point(3, 135);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(127, 18);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Deviation frontend";
+            // 
+            // btnBrowTgtDeviation
+            // 
+            this.btnBrowTgtDeviation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowTgtDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowTgtDeviation.Location = new System.Drawing.Point(1045, 156);
+            this.btnBrowTgtDeviation.Name = "btnBrowTgtDeviation";
+            this.btnBrowTgtDeviation.Size = new System.Drawing.Size(75, 32);
+            this.btnBrowTgtDeviation.TabIndex = 10;
+            this.btnBrowTgtDeviation.Text = "Browse";
+            this.btnBrowTgtDeviation.UseVisualStyleBackColor = true;
+            this.btnBrowTgtDeviation.Click += new System.EventHandler(this.btnBrowTgtDeviation_Click);
+            // 
+            // txtTgtDeviation
+            // 
+            this.txtTgtDeviation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTgtDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTgtDeviation.ForeColor = System.Drawing.Color.Blue;
+            this.txtTgtDeviation.Location = new System.Drawing.Point(5, 156);
+            this.txtTgtDeviation.Multiline = true;
+            this.txtTgtDeviation.Name = "txtTgtDeviation";
+            this.txtTgtDeviation.Size = new System.Drawing.Size(1033, 32);
+            this.txtTgtDeviation.TabIndex = 9;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Blue;
+            this.label6.Location = new System.Drawing.Point(3, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 18);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Handbook frontend";
+            // 
+            // btnBrowTgtHandbook
+            // 
+            this.btnBrowTgtHandbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBrowTgtHandbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBrowTgtHandbook.Location = new System.Drawing.Point(1044, 98);
+            this.btnBrowTgtHandbook.Name = "btnBrowTgtHandbook";
+            this.btnBrowTgtHandbook.Size = new System.Drawing.Size(75, 32);
+            this.btnBrowTgtHandbook.TabIndex = 7;
+            this.btnBrowTgtHandbook.Text = "Browse";
+            this.btnBrowTgtHandbook.UseVisualStyleBackColor = true;
+            this.btnBrowTgtHandbook.Click += new System.EventHandler(this.btnBrowTgtHandbook_Click);
+            // 
+            // txtTgtHandbook
+            // 
+            this.txtTgtHandbook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTgtHandbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTgtHandbook.ForeColor = System.Drawing.Color.Blue;
+            this.txtTgtHandbook.Location = new System.Drawing.Point(5, 98);
+            this.txtTgtHandbook.Multiline = true;
+            this.txtTgtHandbook.Name = "txtTgtHandbook";
+            this.txtTgtHandbook.Size = new System.Drawing.Size(1033, 32);
+            this.txtTgtHandbook.TabIndex = 6;
             // 
             // label2
             // 
@@ -505,6 +666,9 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.label11);
+            this.groupBox6.Controls.Add(this.txtSrcQmsService);
             this.groupBox6.Controls.Add(this.btnBrowSrcDeviation);
             this.groupBox6.Controls.Add(this.label5);
             this.groupBox6.Controls.Add(this.txtSrcDeviation);
@@ -517,7 +681,7 @@
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox6.Location = new System.Drawing.Point(3, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1134, 199);
+            this.groupBox6.Size = new System.Drawing.Size(1134, 254);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Source";
@@ -658,11 +822,21 @@
             this.groupBox5.Controls.Add(this.chkEmptyTargetFolder);
             this.groupBox5.Controls.Add(this.btnClose);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox5.Location = new System.Drawing.Point(0, 788);
+            this.groupBox5.Location = new System.Drawing.Point(0, 869);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1148, 61);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
+            // 
+            // btnCopyAndDeploy
+            // 
+            this.btnCopyAndDeploy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCopyAndDeploy.Location = new System.Drawing.Point(923, 19);
+            this.btnCopyAndDeploy.Name = "btnCopyAndDeploy";
+            this.btnCopyAndDeploy.Size = new System.Drawing.Size(132, 31);
+            this.btnCopyAndDeploy.TabIndex = 11;
+            this.btnCopyAndDeploy.Text = "Copy && Deploy";
+            this.btnCopyAndDeploy.UseVisualStyleBackColor = true;
             // 
             // splitContainer1
             // 
@@ -678,177 +852,83 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1148, 788);
-            this.splitContainer1.SplitterDistance = 224;
+            this.splitContainer1.Size = new System.Drawing.Size(1148, 869);
+            this.splitContainer1.SplitterDistance = 247;
             this.splitContainer1.TabIndex = 12;
             // 
-            // label6
+            // button1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(3, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 18);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Handbook frontend";
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1044, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 32);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Browse";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnBrowTgtHandbook
+            // label11
             // 
-            this.btnBrowTgtHandbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowTgtHandbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowTgtHandbook.Location = new System.Drawing.Point(1044, 98);
-            this.btnBrowTgtHandbook.Name = "btnBrowTgtHandbook";
-            this.btnBrowTgtHandbook.Size = new System.Drawing.Size(75, 32);
-            this.btnBrowTgtHandbook.TabIndex = 7;
-            this.btnBrowTgtHandbook.Text = "Browse";
-            this.btnBrowTgtHandbook.UseVisualStyleBackColor = true;
-            this.btnBrowTgtHandbook.Click += new System.EventHandler(this.btnBrowTgtHandbook_Click);
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Green;
+            this.label11.Location = new System.Drawing.Point(3, 195);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 18);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "QMS Service";
             // 
-            // txtTgtHandbook
+            // txtSrcQmsService
             // 
-            this.txtTgtHandbook.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtSrcQmsService.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTgtHandbook.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTgtHandbook.ForeColor = System.Drawing.Color.Blue;
-            this.txtTgtHandbook.Location = new System.Drawing.Point(5, 98);
-            this.txtTgtHandbook.Multiline = true;
-            this.txtTgtHandbook.Name = "txtTgtHandbook";
-            this.txtTgtHandbook.Size = new System.Drawing.Size(1033, 32);
-            this.txtTgtHandbook.TabIndex = 6;
+            this.txtSrcQmsService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSrcQmsService.ForeColor = System.Drawing.Color.Green;
+            this.txtSrcQmsService.Location = new System.Drawing.Point(6, 216);
+            this.txtSrcQmsService.Multiline = true;
+            this.txtSrcQmsService.Name = "txtSrcQmsService";
+            this.txtSrcQmsService.Size = new System.Drawing.Size(1033, 32);
+            this.txtSrcQmsService.TabIndex = 9;
             // 
-            // label7
+            // label12
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(3, 135);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 18);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Deviation frontend";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Blue;
+            this.label12.Location = new System.Drawing.Point(3, 191);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 18);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "QMSService";
             // 
-            // btnBrowTgtDeviation
+            // button2
             // 
-            this.btnBrowTgtDeviation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowTgtDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowTgtDeviation.Location = new System.Drawing.Point(1045, 156);
-            this.btnBrowTgtDeviation.Name = "btnBrowTgtDeviation";
-            this.btnBrowTgtDeviation.Size = new System.Drawing.Size(75, 32);
-            this.btnBrowTgtDeviation.TabIndex = 10;
-            this.btnBrowTgtDeviation.Text = "Browse";
-            this.btnBrowTgtDeviation.UseVisualStyleBackColor = true;
-            this.btnBrowTgtDeviation.Click += new System.EventHandler(this.btnBrowTgtDeviation_Click);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1045, 212);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 32);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Browse";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // txtTgtDeviation
+            // txtTgtQmsService
             // 
-            this.txtTgtDeviation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTgtQmsService.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTgtDeviation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTgtDeviation.ForeColor = System.Drawing.Color.Blue;
-            this.txtTgtDeviation.Location = new System.Drawing.Point(5, 156);
-            this.txtTgtDeviation.Multiline = true;
-            this.txtTgtDeviation.Name = "txtTgtDeviation";
-            this.txtTgtDeviation.Size = new System.Drawing.Size(1033, 32);
-            this.txtTgtDeviation.TabIndex = 9;
-            // 
-            // btnCopyAndDeploy
-            // 
-            this.btnCopyAndDeploy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopyAndDeploy.Location = new System.Drawing.Point(923, 19);
-            this.btnCopyAndDeploy.Name = "btnCopyAndDeploy";
-            this.btnCopyAndDeploy.Size = new System.Drawing.Size(132, 31);
-            this.btnCopyAndDeploy.TabIndex = 11;
-            this.btnCopyAndDeploy.Text = "Copy && Deploy";
-            this.btnCopyAndDeploy.UseVisualStyleBackColor = true;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.btnConnectFtp);
-            this.groupBox7.Controls.Add(this.label10);
-            this.groupBox7.Controls.Add(this.label9);
-            this.groupBox7.Controls.Add(this.txtPassword);
-            this.groupBox7.Controls.Add(this.txtUsername);
-            this.groupBox7.Controls.Add(this.label8);
-            this.groupBox7.Controls.Add(this.txtUrlFtp);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox7.Location = new System.Drawing.Point(3, 396);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(1134, 135);
-            this.groupBox7.TabIndex = 8;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Deploy";
-            // 
-            // txtUrlFtp
-            // 
-            this.txtUrlFtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUrlFtp.Location = new System.Drawing.Point(9, 45);
-            this.txtUrlFtp.Name = "txtUrlFtp";
-            this.txtUrlFtp.Size = new System.Drawing.Size(404, 24);
-            this.txtUrlFtp.TabIndex = 0;
-            this.txtUrlFtp.Text = "ftp://loke.netpower.no";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "URL";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(443, 45);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(143, 24);
-            this.txtUsername.TabIndex = 2;
-            this.txtUsername.Text = "npfrontend";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(604, 45);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(143, 24);
-            this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "#3K*k4Hj";
-            this.txtPassword.UseSystemPasswordChar = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(443, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Username";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(604, 26);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "Password";
-            // 
-            // btnConnectFtp
-            // 
-            this.btnConnectFtp.Location = new System.Drawing.Point(764, 42);
-            this.btnConnectFtp.Name = "btnConnectFtp";
-            this.btnConnectFtp.Size = new System.Drawing.Size(75, 33);
-            this.btnConnectFtp.TabIndex = 6;
-            this.btnConnectFtp.Text = "Reconnect";
-            this.btnConnectFtp.UseVisualStyleBackColor = true;
-            this.btnConnectFtp.Click += new System.EventHandler(this.btnConnectFtp_Click);
+            this.txtTgtQmsService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTgtQmsService.ForeColor = System.Drawing.Color.Blue;
+            this.txtTgtQmsService.Location = new System.Drawing.Point(5, 212);
+            this.txtTgtQmsService.Multiline = true;
+            this.txtTgtQmsService.Name = "txtTgtQmsService";
+            this.txtTgtQmsService.Size = new System.Drawing.Size(1033, 32);
+            this.txtTgtQmsService.TabIndex = 12;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 849);
+            this.ClientSize = new System.Drawing.Size(1148, 930);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupBox5);
             this.Name = "Main";
@@ -862,6 +942,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tabPageConfigDate.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -872,8 +954,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -941,6 +1021,12 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnConnectFtp;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtSrcQmsService;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtTgtQmsService;
     }
 }
 

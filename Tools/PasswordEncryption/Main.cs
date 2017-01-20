@@ -35,15 +35,19 @@ namespace PasswordEncryption
             string backendSource = @"f:\lamemmv\Publish\handbook.backend";
             string handbookSource = @"f:\lamemmv\Publish\handbook.frontend";
             string deviationSource = @"f:\lamemmv\Publish\deviation.frontend";
+            string windowServiceSource = @"d:\Source\CustomProjects\Handbook\Service\Netpower.HandbookService.WindowsService\bin\Release";
             string backendTarget = string.Format(@"f:\lamemmv\Publish\{0}\backend", currentDate);
             string handbookTarget = string.Format(@"f:\lamemmv\Publish\{0}\handbook.frontend", currentDate);
             string deviationTarget = string.Format(@"f:\lamemmv\Publish\{0}\deviation.frontend", currentDate);
+            string windowServiceTarget = string.Format(@"f:\lamemmv\Publish\{0}\service", currentDate);
             txtSrcBackend.Text = backendSource;
             txtSrcHandbook.Text = handbookSource;
             txtSrcDeviation.Text = deviationSource;
+            txtSrcQmsService.Text = windowServiceSource;
             txtTgtBackend.Text = backendTarget;
             txtTgtHandbook.Text = handbookTarget;
             txtTgtDeviation.Text = deviationTarget;
+            txtTgtQmsService.Text = windowServiceTarget;
 
             if (!System.IO.Directory.Exists(backendTarget))
             {
@@ -58,6 +62,11 @@ namespace PasswordEncryption
             if (!System.IO.Directory.Exists(deviationTarget))
             {
                 System.IO.Directory.CreateDirectory(deviationTarget);
+            }
+
+            if (!System.IO.Directory.Exists(windowServiceTarget))
+            {
+                System.IO.Directory.CreateDirectory(windowServiceTarget);
             }
         }
 
@@ -114,6 +123,7 @@ namespace PasswordEncryption
             DoBackend();
             DoHandbook();
             DoDeviation();
+            DoWindowService();
         }
 
         private void DoBackend()
@@ -138,6 +148,14 @@ namespace PasswordEncryption
             Log("COPYING DEVIATION FRONTEND......\n", Color.Blue, true);
             Log("===================================\n", Color.Blue, true);
             DoCopy(txtSrcDeviation.Text, txtTgtDeviation.Text);
+        }
+
+        private void DoWindowService()
+        {
+            Log("===================================\n", Color.Blue, true);
+            Log("COPYING QMS SERVICE......\n", Color.Blue, true);
+            Log("===================================\n", Color.Blue, true);
+            DoCopy(txtSrcQmsService.Text, txtTgtQmsService.Text);
         }
 
         private void DoCopy(string sourceDir, string destinationDir)
